@@ -1,92 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Pizza Landing Page</title>
-    <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-  <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ovenly Pizza - Best Pizza in Town. Order fresh, hot, and tasty pizzas now!">
+    <title>Ovenly Pizza | Premium Taste</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
-        <a href="#" class="logo">Ovenly Pizza</a>
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <a href="#" class="logo"><i class='bx bxs-pizza'></i> Ovenly</a>
 
         <ul class="navbar">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active-link">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#services">Service</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
-            <!-- Dark Mode -->
-            <div class="bx bx-moon" id="darkmode"></div>
         </ul>
+
+        <div class="header-icons">
+            <div class="bx bx-moon" id="darkmode"></div>
+            <div class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
-    <!-- Home  Section-->
+
+    <!-- Cart Sidebar -->
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+            <!-- Cart Items will be injected here JS -->
+        </div>
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+        </div>
+        <button type="button" class="btn-buy">Buy Now</button>
+        <i class='bx bx-x' id="close-cart"></i>
+    </div>
+
+    <!-- Home Section -->
     <section class="home" id="home">
         <div class="home-text">
-            <h1>Pizza Taste</h1>
-            <h2>The tasty pizza of <br> your choice</h2>
-            <a href="#" class="btn">View Menu</a>
+            <h1>Premium Pizza <br> Experience</h1>
+            <p>Indulge in the finest, hand-tossed pizzas made with locally sourced ingredients and passion.</p>
+            <a href="#menu" class="btn">View Menu</a>
         </div>
         <div class="home-img">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80.png" alt="">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80.png"
+                alt="Delicious Pizza" loading="lazy">
         </div>
     </section>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt="">
+            <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt="About Ovenly Pizza"
+                loading="lazy">
         </div>
         <div class="about-text">
-            <span>About Us</span>
-            <h2>We make good and <br> tasty pizzas</h2>
-            <p>Have a Varieties Of Mouth-Watering Pizza</p>
-            <a href="#" class="btn">Learn More</a>
+            <span>Our Story</span>
+            <h2>We Bake with <br> Love & Passion</h2>
+            <p>Founded in the heart of the city, Ovenly brings you the authentic taste of Italian heritage combined with
+                modern flavors. Every slice tells a story of tradition.</p>
+            <a href="#about" class="btn secondary-btn">Learn More</a>
         </div>
     </section>
 
     <!-- Menu -->
     <section class="menu" id="menu">
         <div class="heading">
-            <span>Menu</span>
-            <h2>Tasty Menu Of The Week</h2>
+            <span>Our Menu</span>
+            <h2>Menu of the Week</h2>
+            <p>Select from our chef's special recommendations</p>
         </div>
         <div class="menu-container">
             <!-- Box 1 -->
             <div class="box">
                 <div class="box-img">
-                    <img src="https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?cs=srgb&dl=pexels-beqa-tefnadze-803290.jpg&fm=jpg" alt="">
+                    <img src="https://images.pexels.com/photos/803290/pexels-photo-803290.jpeg?cs=srgb&dl=pexels-beqa-tefnadze-803290.jpg&fm=jpg"
+                        alt="Cheese Pizza" loading="lazy">
                 </div>
                 <h2>Cheese Pizza</h2>
-                <h3>Tasty Food</h3>
-                <span>370/-</span>
-                <i class='bx bx-cart-alt'></i>
+                <h3>Classic Delight</h3>
+                <div class="price-row">
+                    <span>$12.99</span>
+                    <i class='bx bx-plus add-cart'></i>
+                </div>
             </div>
             <!-- Box 2 -->
             <div class="box">
                 <div class="box-img">
-                    <img src="https://img.freepik.com/free-photo/pepperoni-pizza-with-sausages-cheese-dark-wooden-table_220768-9277.jpg?size=626&ext=jpg" alt="">
+                    <img src="https://img.freepik.com/free-photo/pepperoni-pizza-with-sausages-cheese-dark-wooden-table_220768-9277.jpg?size=626&ext=jpg"
+                        alt="Tropical Pizza" loading="lazy">
                 </div>
                 <h2>Tropical Pizza</h2>
-                <h3>Tasty Food</h3>
-                <span>300/-</span>
-                <i class='bx bx-cart-alt'></i>
+                <h3>Exotic Flavors</h3>
+                <div class="price-row">
+                    <span>$14.50</span>
+                    <i class='bx bx-plus add-cart'></i>
+                </div>
             </div>
             <!-- Box 3 -->
             <div class="box">
                 <div class="box-img">
-                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=740&t=st=1661842808~exp=1661843408~hmac=c40f0c154036b96b1dba17947c4e4f7c07f40db983106490402bb0b7b6ec452e" alt="">
+                    <img src="https://img.freepik.com/free-photo/top-view-pepperoni-pizza-with-mushroom-sausages-bell-pepper-olive-corn-black-wooden_141793-2158.jpg?w=740&t=st=1661842808~exp=1661843408~hmac=c40f0c154036b96b1dba17947c4e4f7c07f40db983106490402bb0b7b6ec452e"
+                        alt="Macroni Pizza" loading="lazy">
                 </div>
-                <h2>Macroni Pizza</h2>
-                <h3>Tasty Food</h3>
-                <span>320/-</span>
-                <i class='bx bx-cart-alt'></i>
+                <h2>Supreme Pizza</h2>
+                <h3>Loaded Goodness</h3>
+                <div class="price-row">
+                    <span>$16.00</span>
+                    <i class='bx bx-plus add-cart'></i>
+                </div>
             </div>
         </div>
     </section>
@@ -95,27 +138,27 @@
     <section class="services" id="services">
         <div class="heading">
             <span>Services</span>
-            <h2>We provide best food services</h2>
+            <h2>Why Choose Us</h2>
         </div>
 
-        <div class="servives-container">
+        <div class="services-container">
             <!-- Box 1 -->
             <div class="s-box">
-                <img src="https://images.pexels.com/photos/280453/pexels-photo-280453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
-                <h3>You Order</h3>
-                <p>You Trust We Give The Best.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/2830/2830305.png" alt="Order">
+                <h3>Easy Order</h3>
+                <p>Seamless ordering process through our app or website.</p>
             </div>
             <!-- Box 2 -->
             <div class="s-box">
-                <img src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
-                <h3>Shipping</h3>
-                <p>Your Order Will be Shipped Swifty & Safely.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/709/709790.png" alt="Shipping">
+                <h3>Fast Delivery</h3>
+                <p>We promise to deliver within 30 minutes or it's free.</p>
             </div>
             <!-- Box 3 -->
             <div class="s-box">
-                <img src="https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.png" alt="">
-                <h3>Delivered</h3>
-                <p>Get Your Order Delivered Within 30 Minutes.</p>
+                <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Quality">
+                <h3>Best Quality</h3>
+                <p>We use only the finest and freshest ingredients.</p>
             </div>
         </div>
     </section>
@@ -123,55 +166,68 @@
     <!-- Connect -->
     <section class="connect">
         <div class="connect-text">
-            <span>Let's Talk</span>
-            <h2>Connect now</h2>
+            <span>Newsletter</span>
+            <h2>Subscribe for Offers</h2>
         </div>
-        <a href="#" class="btn">Contact Us</a>
+        <div class="newsletter">
+            <input type="email" placeholder="Your email address..." class="email-input">
+            <a href="#" class="btn">Subscribe</a>
+        </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="contact-box">
-            <h3>Ovenly Pizza</h3>
-            <span>Connect With Us</span>
+            <h3><i class='bx bxs-pizza'></i> Ovenly</h3>
+            <span>Follow us on social media for updates and delicious photos.</span>
             <div class="social">
-                <a href="#"><i class='bx bxl-facebook' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
             </div>
         </div>
         <div class="contact-box">
-            <h3>Menu Links</h3>
+            <h3>Explore</h3>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#menu">Menu</a></li>
-            <li><a href="#services">Service</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </div>
         <div class="contact-box">
-            <h3>Quick Links</h3>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="#Privacy Policy">Privacy Policy</a></li>
-            <li><a href="#Disclaimer">Disclaimer</a></li>
-            <li><a href="#Terms Of Use">Terms Of Use</a></li>
+            <h3>Legal</h3>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Cookies</a></li>
         </div>
         <div class="contact-box address">
-            <h3>Contact</h3>
-            <i class='bx bxs-map' ><span>B 36/43 IP Mall,Sigra,Varanasi,India</span></i>
-            <i class='bx bxs-phone' ><span>+91 9559338187</span></i>
-            <i class='bx bxs-envelope' ><span>harsh.tiwari100100@gmail.com</span></i>
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+                <i class='bx bxs-map'></i>
+                <span>B 36/43 IP Mall, Sigra, Varanasi, India</span>
+            </div>
+            <div class="contact-item">
+                <i class='bx bxs-phone'></i>
+                <span>+91 9559338187</span>
+            </div>
+            <div class="contact-item">
+                <i class='bx bxs-envelope'></i>
+                <span>hello@ovenlypizza.com</span>
+            </div>
         </div>
     </section>
 
     <!-- Copyright -->
     <div class="copyright">
-        <p>© All Right Reserved.</p>
+        <p>© 2024 Ovenly Pizza. All Rights Reserved.</p>
     </div>
-
 
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Link To JavaScript -->
     <script src="script.js"></script>
+    <script src="cart.js"></script>
 </body>
+
 </html>
